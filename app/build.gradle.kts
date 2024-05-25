@@ -47,6 +47,20 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
+    testImplementation("junit:junit:4.12")
     androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+
+    //Required dependencies for Testing witth Espresso
+    androidTestImplementation(libs.androidx.espresso.core)//required
+    androidTestImplementation(libs.androidx.espresso.core) //required
+    androidTestImplementation(libs.androidx.runner) //required
+    androidTestImplementation(libs.androidx.rules) //required
+
+//Dependencies for UI testing found here--> https://developer.android.com/training/testing/espresso/setup
+//    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+//    androidTestImplementation("androidx.test:runner:1.4.0")
+//    androidTestImplementation("androidx.test:rules:1.4.0")
+
+
+
 }

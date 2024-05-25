@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">UI_Testing_Task</string>
+    <string name="ui_testing_sample_app">UI Testing Sample App</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="print_greeting">Print Greeting</string>
+    <string name="next">Next</string>
+    <string name="text_back">Back</string>
+    <string name="text_second_activity">Second Activity</string>
 </resources>

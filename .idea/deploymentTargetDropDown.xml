@@ -2,7 +2,19 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="MainActivityTest">
+        <State />
+      </entry>
       <entry key="app">
+        <State />
+      </entry>
+      <entry key="testBackButtonAndTextIsVisible()">
+        <State />
+      </entry>
+      <entry key="testBackPressToMainActivity()">
+        <State />
+      </entry>
+      <entry key="testTitleTextDisplayed()">
         <State />
       </entry>
     </value>
