@@ -50,9 +50,8 @@ dependencies {
     testImplementation("junit:junit:4.12")
     androidTestImplementation(libs.androidx.junit)
 
-    //Required dependencies for Testing witth Espresso
+    //Required dependencies for Testing with Espresso
     androidTestImplementation(libs.androidx.espresso.core)//required
-    androidTestImplementation(libs.androidx.espresso.core) //required
     androidTestImplementation(libs.androidx.runner) //required
     androidTestImplementation(libs.androidx.rules) //required
 

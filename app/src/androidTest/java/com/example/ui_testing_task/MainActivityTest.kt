@@ -21,13 +21,19 @@ import org.junit.internal.runners.JUnit4ClassRunner
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
+/*
+We tag the class with @RunWith (AndroidJUnit4ClassRunner::class)
+This tag it tells the testing framework to use this runner to execute your tests.
+ This is necessary for testing Android-specific components such as Activities, Services,
+ ContentProviders, etc. Sets up env properly before running the test
+ */
 @RunWith(AndroidJUnit4ClassRunner::class)
 class MainActivityTest{
 
     /*
-    Below we need to create test that are specifically related to the UI display and functionality
-    UI Test are specifically related to visual validity test rather than deeper core logic test of the app.
-    (I look at it as Surface Level test)
+    Below we need to create test that are specifically related to the UI display and functionality.
+    UI Test are specifically related to visual validity test rather than deeper core logic test of
+    the app.(Surface Level test)
      */
     @Test
     fun testIsActivityInView() {
@@ -35,7 +41,7 @@ class MainActivityTest{
         val activityScenario = ActivityScenario.launch(MainActivity::class.java)
 
         //check if the activity is displayed
-        onView(withId(R.id.main)).check(matches(ViewMatchers.isDisplayed()))
+        onView(withId(R.id.main)).check(matches(isDisplayed()))
     }
 
     @Test
@@ -58,14 +64,16 @@ class MainActivityTest{
         onView(withId(R.id.tvMainActivityTitle)).check(matches(withText(R.string.ui_testing_sample_app)))
     }
 
+    //Navigation from Main to Second activity
     @Test
     fun testNavFromMainToSecondActivity(){
         val activityScenario = ActivityScenario.launch(MainActivity::class.java)
-        onView(withId(R.id.btnNext)).perform(ViewActions.click()) //click the Next Button in MainActivity
+        onView(withId(R.id.btnNext)).perform(click()) //click the Next Button in MainActivity
         onView(withId(R.id.second)).check(matches(isDisplayed())) //check if Second Activity is displayed after Button click
 
     }
 
+    //Test Back Press to main activity
     @Test
     fun testBackPressToMainActivity(){
         val activityScenario = ActivityScenario.launch(MainActivity::class.java) //launch MainActivity

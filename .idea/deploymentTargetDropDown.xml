@@ -5,16 +5,19 @@
       <entry key="MainActivityTest">
         <State />
       </entry>
+      <entry key="SecondActivityTest">
+        <State />
+      </entry>
       <entry key="app">
         <State />
       </entry>
-      <entry key="testBackButtonAndTextIsVisible()">
+      <entry key="testIsActivityInView()">
         <State />
       </entry>
-      <entry key="testBackPressToMainActivity()">
+      <entry key="testIsImageViewVisible()">
         <State />
       </entry>
-      <entry key="testTitleTextDisplayed()">
+      <entry key="testNavFromSecondActivityToMain()">
         <State />
       </entry>
     </value>
